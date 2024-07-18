@@ -1,5 +1,5 @@
 # ictfromabc clone (React based)
-Redesigning the UI of [ictfromabc](https://ictfromabc.com) website using React.
+Redesigning the UI (maybe some inner workings :D) of [ictfromabc](https://ictfromabc.com) website using React.
 
 ## Contact me
 **Lasith Bhagya**

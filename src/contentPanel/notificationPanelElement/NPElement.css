@@ -1,0 +1,97 @@
+#notification-panel {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 24em;
+    height: 28em;
+    border-radius: 1em;
+}
+.np-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.5em 0 1em;
+    width: calc(100% - 1.5em);
+    height: 10%;
+    border-radius: 1em 1em 0 0;
+    background-color: var(--dark3);
+}
+.np-header > h1 {
+    font-family: Fredoka;
+    font-weight: 600;
+    font-size: 1.4em;
+    color: var(--light3);
+}
+.np-header > .button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90px;
+    height: 40px;
+}
+.np-header > .button-container > button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.np-header > .button-container > button > img {
+    width: 20px;
+    height: 20px;
+}
+
+.np-body {
+    padding: 0.5em;
+    width: calc(100% - (1em + 2px));
+    height: calc(90% - (1em + 2px));
+    border-radius: 0 0 1em 1em;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 0px;
+    backdrop-filter: blur(20px);
+}
+#notification-holder {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    padding: 0.5em;
+    width: calc(100% - 1em);
+    height: calc(100% - 1em);
+}
+#notification-holder > .notification {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    width: calc(100% - 1em);
+    border-radius: 0.6em;
+    background-color: rgba(200, 200, 200, 0.25);
+    backdrop-filter: blur(100px);
+    cursor: pointer;
+}
+#notification-holder > .readed {
+    background-color: rgba(100, 100, 100, 0.25);
+    cursor: default;
+}
+#notification-holder > .notification > #notification-text {
+    font-family: Fredoka;
+    font-weight: 500;
+    font-size: 1em;
+    color: var(--light2);
+}
+#notification-holder > .readed > #notification-text {
+    font-weight: 400;
+    color: var(--light3);
+}
+#notification-holder > .notification > #notification-date {
+    margin: 0.5em 0 0 0;
+    font-family: monospace;
+    font-size: 1em;
+    color: var(--light3);
+}

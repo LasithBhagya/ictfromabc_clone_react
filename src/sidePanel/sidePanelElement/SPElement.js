@@ -1,8 +1,11 @@
 import './SPElement.css'
+import { useSelection } from '../SelectionContext';
 
-function SPElement({url = '#', id = undefined, imgURL, text = 'undefined'}) {
+function SPElement({id = "", url = '#', status = undefined, imgURL, text = 'undefined'}) {
+    const { spes, ChangeSelection } = useSelection();
+    const handleClick = () => { ChangeSelection(id) };
     return(
-        <a href={url} className="side-panel-element" id={id}>
+        <a href='#' className="side-panel-element" id={status} onClick={handleClick}>
             <div id="spe-icon">
                 <img src={imgURL} alt="logo" />
             </div>

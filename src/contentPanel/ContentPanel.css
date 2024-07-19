@@ -57,11 +57,17 @@
     width: 7em;
     height: 3em;
 }
-.content-panel-header > .status > .notifications {
+.content-panel-header > .status > .notification-button {
+    width: 1.6em;
+    height: 1.6em;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.content-panel-header > .status > .notification-button > img {
     filter: brightness(0.5);
     width: 1.6em;
     height: 1.6em;
-    cursor: pointer;
 }
 .content-panel-header > .status > .profile {
     filter: brightness(0.5);
@@ -82,7 +88,7 @@
 .content-holder {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .cpb-title {
     margin: 0.5em;

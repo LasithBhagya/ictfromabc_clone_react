@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Container from './Container';
 import reportWebVitals from './reportWebVitals';
+import { SelectionProvider } from './sidePanel/SelectionContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Container />
+    <SelectionProvider>
+        <Container />
+    </SelectionProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -7,7 +7,7 @@ function ContentHolder({type = null, title = 'NULL', content = undefined}) {
         <>
         <h1 className="cpb-title">{title}</h1>
         <main className='content-holder'>
-            {content.map((item, index) => (<CPElement key={index} element={type} title={item[0]} details={item[1]} live={item[2]} />))}
+            {content.map((item) => (<CPElement key={item.id} element={type} content={item} />))}
         </main>
         </>
     );

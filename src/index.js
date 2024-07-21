@@ -4,12 +4,15 @@ import './index.css';
 import Container from './Container';
 import reportWebVitals from './reportWebVitals';
 import { SelectionProvider } from './sidePanel/SelectionContext';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <SelectionProvider>
-        <Container />
-    </SelectionProvider>
+    <BrowserRouter>
+        <SelectionProvider>
+            <Container />
+        </SelectionProvider>
+    </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

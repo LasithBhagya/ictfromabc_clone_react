@@ -1,8 +1,8 @@
 .container {
     display: flex;
     align-items: flex-start;
-    padding: 0.5em;
-    height: calc(100% - 1em);
+    padding: 8px;
+    height: calc(100% - 16px);
     background-color: var(--dark2);
-    border-radius: 0.6em;
+    border-radius: 12px;
 }

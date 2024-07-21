@@ -14,8 +14,8 @@ export function toggleNotificationPanel(button) {
     }
     if (notificationPanel.style.display === 'none' || notificationPanel.style.display === '') {
         const rect = button.getBoundingClientRect();
-        notificationPanel.style.left = `calc(${rect.left}px - 24em)`;
-        notificationPanel.style.top = `${rect.bottom + window.scrollY}px`;
+        notificationPanel.style.left = `calc(${rect.left}px - 22em)`;
+        notificationPanel.style.top = `calc(${rect.bottom}px + 1em)`;
         notificationPanel.style.display = 'flex';
     } else {
         notificationPanel.style.display = 'none';
@@ -25,7 +25,7 @@ export function toggleNotificationPanel(button) {
 function NPElement() {
     const notification = (
         <div className='notification'>
-            <p id='notification-text'>A new video has beed added  to HTML lesson.</p>
+            <p id='notification-text'>A new video has beed added  to React lesson.</p>
             <p id='notification-date'>19-07-2024</p>
         </div>
     );

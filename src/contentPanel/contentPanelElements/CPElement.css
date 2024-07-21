@@ -9,11 +9,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: 1em;
-    padding: 1em;
-    width: 28em;
-    height: 16em;
-    border-radius: 1em;
+    margin: 16px;
+    padding: 16px;
+    min-width: 280px;
+    width: 40%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 16px;
     background-color: var(--dark3);
     box-shadow: 0px 0px 10px 10px var(--dark2);
 }
@@ -25,8 +27,8 @@
 }
 .element-card > .ect-underline {
     margin: 0.5em 0em 0.5em 0em;
-    width: 90%;
-    height: 0.2em;
+    width: 94%;
+    height: 2px;
     background-color: var(--red1);
 }
 .element-card > #element-details {
@@ -37,18 +39,38 @@
     color: var(--light3);
 }
 .element-card > #ec-button {
-    padding: 1em 2em 1em 2em;
-    margin: 1em;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 16px 32px 16px 32px;
+    margin: 16px;
     font-family: Fredoka;
-    font-weight: 550;
+    font-weight: 500;
     font-size: 1em;
     text-align: center;
     text-decoration: none;
-    border-radius: 0.5em;
+    border: none;
+    border-radius: 8px;
     color: var(--light1);
     background-color: var(--red1);
+    cursor: pointer;
 }
-.element-card > #ec-button-dissable {
+.element-card > #ec-button::before {
+    background-color: rgba(255, 255, 255, 0.25);
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(-100%, 0%) rotate(-37deg);
+    z-index: 1;
+    width: 200%;
+    height: 100%;
+    transition: 400ms ease-in;
+}
+.element-card > #ec-button:hover::before {
+    transform: translate(100%, 0%) rotate(-37deg);
+}
+.element-card > #ec-button-disabled {
     padding: 1em 2em 1em 2em;
     margin: 1em;
     font-family: Fredoka;
@@ -56,15 +78,16 @@
     font-size: 1em;
     text-align: center;
     text-decoration: none;
-    border-radius: 0.5em;
+    border: none;
+    border-radius: 8px;
     color: var(--light5);
     background-color: var(--dark4);
     pointer-events: none;
     cursor: default;
 }
 .element-card > .indicator {
-    width: 1em;
-    height: 1em;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     background-color: var(--red1);
     position: absolute;
@@ -72,7 +95,7 @@
     right: 0;
     transform: translate(50%, -50%);
     animation: liveNow 1.5s infinite ease-in-out;
-    box-shadow: 0 0 0.4em 0.4em var(--red1x);
+    box-shadow: 0 0 6px 6px var(--red1x);
     cursor: pointer;
 }
 .element-card > .tooltip {
@@ -82,11 +105,11 @@
     text-align: center;
     font-family: Fredoka;
     font-size: 0.8em;
-    border-radius: 1em;
-    padding: 1em;
+    border-radius: 16px;
+    padding: 14px;
     position: absolute;
     z-index: 10;
-    top: 4em;
+    top: 54px;
     right: 0;
     transform: translate(50%, -50%);
     opacity: 0;
@@ -104,7 +127,7 @@
         opacity: 1;
     }
     50% {
-        transform: scale(1.5);
-        opacity: 0.7;
+        transform: scale(1.25);
+        opacity: 0.8;
     }
 }

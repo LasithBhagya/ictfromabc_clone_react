@@ -1,9 +1,9 @@
-import React, { createContext, useState, useRef, useContext } from 'react';
+import React, { createContext, useState, useContext } from 'react';
 
 export const SelectionContext = createContext();
 
 export const SelectionProvider = ({ children }) => {
-    const [spes, speUpdater] = useState([
+    const [spes, setSpes] = useState([
         { url: 'myLessons', selected: true },
         { url: 'myTutes', selected: false },
         { url: 'al2026', selected: false },
@@ -18,15 +18,17 @@ export const SelectionProvider = ({ children }) => {
         { url: 'olPastpapers', selected: false },
         { url: 'paymentDetails', selected: false },
     ]);
-
-    const prevSelectionRef = useRef(null);
-
-    const ChangeSelection = (newSelection) => {
-        if (newSelection !== prevSelectionRef.current) {
-            console.log('change to ' + newSelection.url);
-            speUpdater(prevState => prevState.map(item => item.url === newSelection.url ? { ...item, selected: true } : { ...item, selected: false }));
-            prevSelectionRef.current = newSelection;
-        }
+    const ChangeSelection = (url) => {
+        setSpes((prevSpes) => {
+            const newSpes = prevSpes.map((item) =>
+                item.url === url ? { ...item, selected: true } : { ...item, selected: false }
+            );
+            // Check if there is an actual change before updating state
+            if (JSON.stringify(prevSpes) !== JSON.stringify(newSpes)) {
+                return newSpes;
+            }
+            return prevSpes;
+        });
     };
 
     return (
@@ -36,4 +38,4 @@ export const SelectionProvider = ({ children }) => {
     );
 };
 
-export const useSelection = () => useContext(SelectionContext);
+export const useSelection = () => { return useContext(SelectionContext) };

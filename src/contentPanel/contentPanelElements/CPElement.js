@@ -9,7 +9,7 @@ function CPElement({element = undefined, content = undefined}) {
                     <h1 id='element-title'>{content.name}</h1>
                     <div className='ect-underline'></div>
                     <p id='element-details'>{content.description}</p>
-                    <a href='#' id='ec-button'>Join</a>
+                    <button type='button' id='ec-button'>Join</button>
                     {content.isLive && (
                         <>
                             <div className='indicator'></div>
@@ -24,28 +24,28 @@ function CPElement({element = undefined, content = undefined}) {
             if (content.ordered && content.available) {
                 tempReturnElement = (
                     <>
-                        <p style={{color: '#0f0', fontFamily: 'Fredoka'}}>Ordered</p>
-                        <a href='#' id='ec-button'>The tute is damaged</a>
+                        <p style={{color: '#0f0', fontFamily: 'Fredoka', fontStyle: 'italic'}}>Ordered</p>
+                        <button type='button' id='ec-button'>The tute is damaged</button>
                     </>
                 );
             } else if (!content.ordered && content.released && content.available) {
                 tempReturnElement = (
-                    <a href='#' id='ec-button'>Order</a>
+                    <button type='button' id='ec-button'>Order</button>
                 );
             } else if (!content.ordered && !content.released && content.available) {
                 tempReturnElement = (
-                    <a href='#' id='ec-button'>Pre-Order</a>
+                    <button type='button' id='ec-button'>Pre-Order</button>
                 );
             } else if (content.ordered && !content.available) {
                 tempReturnElement = (
                     <>
-                        <p style={{color: '#0f0', fontFamily: 'Fredoka'}}>Ordered</p>
-                        <a href='#' id='ec-button-dissable'>The tute is damaged</a>
+                        <p style={{color: '#0f0', fontFamily: 'Fredoka', fontStyle:'italic'}}>Ordered</p>
+                        <button type='button' id='ec-button-disabled' disabled>The tute is damaged</button>
                     </>
                 );
             } else {
                 tempReturnElement = (
-                    <a id='ec-button-dissable'>Order</a>
+                    <button type='button' id='ec-button-disabled' disabled>Pre-Order</button>
                 );
             }
             returnElement = (

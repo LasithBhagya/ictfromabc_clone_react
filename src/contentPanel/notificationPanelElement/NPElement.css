@@ -2,9 +2,10 @@
     position: absolute;
     display: none;
     flex-direction: column;
-    width: 24em;
-    height: 28em;
-    border-radius: 1em;
+    width: 384px;
+    height: 448px;
+    border-radius: 10px;
+    z-index: 10;
 }
 .np-header {
     display: flex;
@@ -12,10 +13,13 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    padding: 0 0.5em 0 1em;
-    width: calc(100% - 1.5em);
+    padding: 0 8px 0 16px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 0px;
+    width: 100%;
     height: 10%;
-    border-radius: 1em 1em 0 0;
+    border-radius: 16px 16px 0 0;
     background-color: var(--dark3);
 }
 .np-header > h1 {
@@ -45,12 +49,13 @@
 
 .np-body {
     padding: 0.5em;
-    width: calc(100% - (1em + 2px));
-    height: calc(90% - (1em + 2px));
-    border-radius: 0 0 1em 1em;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    height: 90%;
+    border-radius: 0 0 16px 16px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-top: 0px;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(24px);
 }
 #notification-holder {
     display: flex;
@@ -59,34 +64,40 @@
     align-items: flex-start;
     justify-content: flex-start;
     overflow-y: scroll;
-    padding: 0.5em;
-    width: calc(100% - 1em);
-    height: calc(100% - 1em);
+    padding: 8px;
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(100% - 8px);
 }
 #notification-holder > .notification {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 0.5em;
-    padding: 0.5em;
-    width: calc(100% - 1em);
-    border-radius: 0.6em;
+    margin-bottom: 8px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 8px 2px rgba(10, 10, 10, 0.1);
     background-color: rgba(200, 200, 200, 0.25);
     backdrop-filter: blur(100px);
     cursor: pointer;
 }
 #notification-holder > .readed {
+    border: 1px solid rgba(255, 255, 255, 0.1);
     background-color: rgba(100, 100, 100, 0.25);
     cursor: default;
 }
 #notification-holder > .notification > #notification-text {
     font-family: Fredoka;
-    font-weight: 500;
+    font-weight: 450;
     font-size: 1em;
+    text-shadow: 0px 2px 8px var(--dark1);
     color: var(--light2);
 }
 #notification-holder > .readed > #notification-text {
-    font-weight: 400;
+    font-weight: 300;
     color: var(--light3);
 }
 #notification-holder > .notification > #notification-date {
@@ -94,4 +105,7 @@
     font-family: monospace;
     font-size: 1em;
     color: var(--light3);
+}
+#notification-holder > .readed > #notification-date {
+    color: var(--light4);
 }

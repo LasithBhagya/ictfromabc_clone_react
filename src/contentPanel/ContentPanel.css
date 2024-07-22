@@ -72,13 +72,16 @@
     width: 24px;
     height: 24px;
 }
+.content-panel-header > .status > .status-button:hover > img, .content-panel-header > .status > .status-button:hover > p {
+    filter: brightness(0.9);
+}
 .content-panel-header > .status > .status-button > p {
     margin-left: 16px;
     font-family: Fredoka;
     font-weight: 400;
     font-size: 1.4em;
     color: var(--light1);
-    filter: brightness(0.7);
+    filter: brightness(0.6);
 }
 .content-panel-header > .status > .profile {
     filter: brightness(0.5);

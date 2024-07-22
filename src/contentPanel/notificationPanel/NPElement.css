@@ -1,0 +1,46 @@
+#notification-holder > .notification {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 8px 2px rgba(10, 10, 10, 0.1);
+    background-color: rgba(200, 200, 200, 0.25);
+    backdrop-filter: blur(100px);
+    cursor: pointer;
+}
+#notification-holder > .notification:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+#notification-holder > #readed {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(100, 100, 100, 0.25);
+    cursor: default;
+}
+#notification-holder > #readed:hover {
+    background-color: rgba(100, 100, 100, 0.4);
+}
+#notification-holder > .notification > #notification-text {
+    font-family: Fredoka;
+    font-weight: 450;
+    font-size: 1em;
+    text-shadow: 0px 2px 8px var(--dark1);
+    color: var(--light2);
+}
+#notification-holder > #readed > #notification-text {
+    font-weight: 300;
+    color: var(--light3);
+}
+#notification-holder > .notification > #notification-date {
+    margin: 0.5em 0 0 0;
+    font-family: monospace;
+    font-size: 1em;
+    color: var(--light3);
+}
+#notification-holder > #readed > #notification-date {
+    color: var(--light4);
+}

@@ -10,7 +10,7 @@ import { useSelection } from './SelectionContext';
 function SidePanel() {
     const { spes } = useSelection();
     return (
-        <aside className='side-panel'>
+        <div className='side-panel'>
             <div className="side-panel-header">
                 <h1 id="sph1">ict</h1>
                 <h1 id="sph2">fromabc</h1>
@@ -41,7 +41,7 @@ function SidePanel() {
                     <SPElement url={`/${spes[12].url}`} id={spes[12]} status={spes[12].selected ? 'selected' : undefined} imgURL={payment} text='Payment Details' />
                 </div>
             </div>
-        </aside>
+        </div>
     );
 }
 

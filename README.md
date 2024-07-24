@@ -1,6 +1,8 @@
 # ictfromabc clone (React based)
 This is my workflow of redesigning the UI (maybe some inner workings :D) of [ictfromabc](https://ictfromabc.com) website using React. Note that this is a preview version of the user interface. The interface is not yet fully supported for mobile devices. All SVG icons are borrowed from [svgrepo.com](https://www.svgrepo.com/) website for free.
 
+## NOTE: I've made a pure HTML and CSS version too. (with a little bit of JS) [Click here](https://github.com/LasithBhagya/ictfromabc_clone)
+
 ## If running on your local machine
 > **The built (exported) version will be released soon. Until then Make sure,**
 > * [Node.js](https://nodejs.org/en) (`v20.15.0`) and **React Router DOM** (`npm install react-router-dom`) are installed (*Using a setup guide could be the best way*).<br>

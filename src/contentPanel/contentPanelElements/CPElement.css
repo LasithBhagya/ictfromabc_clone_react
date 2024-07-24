@@ -56,19 +56,20 @@
     cursor: pointer;
 }
 .element-card > #ec-button::before {
-    background-color: rgba(255, 255, 255, 0.25);
+    background-image: linear-gradient(transparent 0%, rgba(255, 255, 255, 0.3) 30%,rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.3) 70%, transparent 100%);
     content: '';
     position: absolute;
     top: 0%;
     left: 0%;
-    transform: translate(-100%, 0%) rotate(-37deg);
+    transform: translate(-100%, 0%) rotate(-47deg);
     z-index: 1;
-    width: 200%;
+    width: 150%;
     height: 100%;
-    transition: 400ms ease-in;
+    transition: 0s;
 }
 .element-card > #ec-button:hover::before {
-    transform: translate(100%, 0%) rotate(-37deg);
+    transform: translate(100%, 0%) rotate(-47deg);
+    transition: 400ms ease-in;
 }
 .element-card > #ec-button-disabled {
     padding: 1em 2em 1em 2em;

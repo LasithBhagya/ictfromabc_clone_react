@@ -13,5 +13,4 @@ This is my workflow of redesigning the UI (maybe some inner workings :D) of [ict
 ## Contact me
 **Lasith Bhagya**
 > `email:` lasithbhagya13@gmail.com<br>
-> `Whatsapp, Telegram No:` 0769182646<br>
 > `Instagram:` @lasith.bhagya
